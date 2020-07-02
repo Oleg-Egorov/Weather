@@ -33,7 +33,7 @@ export default class ShowWeather extends Component {
                 const { coords: { latitude, longitude } } = position;
                 
                 if (latitude !== 'null' && longitude !== 'null') {
-                    this.updateWeather(latitude, longitude) ;
+                    this.fetchWeather(latitude, longitude) ;
                 }
             },
             () => {
@@ -46,7 +46,7 @@ export default class ShowWeather extends Component {
     }
 
     componentDidMount() {
-        this.getLocation();
+        this.updateWeather();
     }
     
     fetchWeather(lat, lon) {
