@@ -1,0 +1,27 @@
+
+.Widget {
+    &_Top {
+        display: flex;
+        padding: 10px 50px;
+        align-items: center;
+    }
+
+    &__Img {
+        height: 80px;
+        width: 80px;
+    }
+
+    &__Text {
+        font-size: 48px;
+    }
+
+    &__SmallText {
+        margin-right: 5px;
+        font-size: 14px;
+        opacity: 0.7;
+    }
+
+    &__TextOther {
+        font-size: 18px;
+    }
+}

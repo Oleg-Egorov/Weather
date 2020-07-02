@@ -1,0 +1,19 @@
+$fontFamily: 'Arial';
+
+p {
+    font-family: $fontFamily;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    margin: 5px;
+}
+
+.Error {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    &__SmallText {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,21 @@
+.Widget {
+    &_Bottom {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 50px;
+    }
+
+    &__Other {
+        margin-bottom: 15px;
+    }
+
+    &__TextOther {
+        font-size: 18px;
+    }
+
+    &__Logo {
+        height: 15px;
+        opacity: 0.6;
+        margin-right: 10px;
+    }
+}

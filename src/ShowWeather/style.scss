@@ -1,0 +1,18 @@
+$fontFamili: 'Arial';
+
+span {
+    color: white;
+    font-family: $fontFamili;
+}
+
+.Widget {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid gray;
+    border-radius: 20px;
+    background-color: black;
+}
