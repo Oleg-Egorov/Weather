@@ -63,7 +63,28 @@ export default class ShowWeather extends Component {
                     pressure: dataMain.pressure,
                     humidity: dataMain.humidity,
 
-                    name: body.data.name,
+                    icon: dataWeather.icon,
+                    id: dataWeather.id,
+
+                    name:  body.data.name
+                });
+            })
+    };
+
+    fetchWeatherByCityName(cityName) {
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&lang=ru&appid=1613dc8f6c0b2cd694eb4bae5e5962c8&units=metric`)
+            .then((body) => {
+                const dataMain = body.data.main;
+                const dataWeather = body.data.weather[0];
+                
+                this.setState({
+                    loading: false,
+
+                    temp: dataMain.temp,
+                    feels_like: dataMain.feels_like,
+                    pressure: dataMain.pressure,
+                    humidity: dataMain.humidity,
+
                     icon: dataWeather.icon,
                     id: dataWeather.id,
                 });
@@ -75,19 +96,20 @@ export default class ShowWeather extends Component {
                 feels_like, 
                 pressure, 
                 humidity, 
+                name,
                 loading, 
                 error,
-                icon,
-                name } = this.state;
+                icon } = this.state;
 
         const Weather = () => {
             return(
                 <React.Fragment>
+
                     <WidgetTop temp = {temp} 
                                feels_like = {feels_like} 
                                icon = {icon} 
                                name = {name}/>
-                               
+                            
                     <WidgetBottom pressure = {pressure} 
                                   humidity = {humidity} />
                 </React.Fragment>

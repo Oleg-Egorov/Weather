@@ -15,4 +15,18 @@ span {
     border: 5px solid gray;
     border-radius: 20px;
     background-color: black;
+
+    @media screen and (max-device-width: 1000px) {
+        width: 600px;
+        height: 300px;
+        border: 10px solid gray;
+        border-radius: 30px;
+    }
+
+    @media screen and (max-device-width: 600px) {
+        width: 1000px;
+        height: 500px;
+        border: 15px solid gray;
+        border-radius: 40px;
+    }
 }
